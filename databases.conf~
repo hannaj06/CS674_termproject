@@ -1,0 +1,13 @@
+[postgres_noauth]
+	dbname:CS674
+	user:joe
+	password:KA83MS 
+	host:127.0.0.1
+	port:5432
+
+[postgres]
+	dbname:CS674
+	user:joe
+	password:KA83MS 
+	host:127.0.0.1
+	port:5432
