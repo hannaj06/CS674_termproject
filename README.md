@@ -1,3 +1,3 @@
-# security
+# CS674 Term Project
 
-http://50.116.43.135:8111/login
+127.0.0.1:8020

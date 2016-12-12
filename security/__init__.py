@@ -13,13 +13,13 @@ templateLoader = FileSystemLoader( searchpath = "templates/" )
 templateEnv = Environment( loader = templateLoader , cache_size=0)
 login_page = templateEnv.get_template("login.html")
 main_page = templateEnv.get_template("main.html")
-sorry_page = templateEnv.get_template("sorry.html")
 
-# db = db_connect('postgres')
-# cookie_secret = db.fetchall("SELECT * FROM cookie_secret;")
-# cookie_secret = cookie_secret['results'][0][0]
-# db.close()
-cookie_secret='test'
+
+db = db_connect('webapp_noauth')
+cookie_secret = db.fetchall("SELECT * FROM cookie_secret;")
+cookie_secret = cookie_secret['results'][0][0]
+db.close()
+
 class BaseHandler(tornado.web.RequestHandler):
 	def auth_check(self):
 		cookie = self.get_secure_cookie('CS674_user')

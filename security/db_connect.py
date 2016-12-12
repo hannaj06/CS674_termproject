@@ -68,7 +68,7 @@ class db_connect:
 			a = [['empty', 'set'],['empty', 'set']]
 			return {'results': ['empty set'], 'column_names' : column_names, 'html_table': '<h4>Empty Result Set!</h4>'}
 
-		#return dictionatary of results, headers, and html table
+		self.connection.commit()
 		return {'results': results, 'column_names': column_names}
 
 
