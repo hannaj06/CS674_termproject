@@ -1,7 +1,7 @@
 from security import *
 from security.db_connect import db_connect
 
-single_process = True
+single_process = False
 
 class main(BaseHandler):
 	def get(self):
